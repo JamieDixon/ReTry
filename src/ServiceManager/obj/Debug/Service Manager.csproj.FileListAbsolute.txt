@@ -1,0 +1,7 @@
+C:\dev\Repositories\ServiceManager\src\ServiceManager\bin\Debug\Service Manager.dll
+C:\dev\Repositories\ServiceManager\src\ServiceManager\bin\Debug\Service Manager.pdb
+C:\dev\Repositories\ServiceManager\src\ServiceManager\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Service Manager.dll
+C:\dev\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Service Manager.pdb
+C:\dev\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Decl\Service Manager.dll
+C:\dev\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Decl\Service Manager.pdb

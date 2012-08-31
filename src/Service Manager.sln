@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service Manager", "ServiceManager\Service Manager.csproj", "{92882886-D064-4101-8AC8-C2808F723953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceManager.Tests", "ServiceManager.Tests\ServiceManager.Tests.csproj", "{122ED651-D2AC-4D64-B35E-765F37952917}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C2B0C491-69AF-46DB-97CA-8369DF84F10E}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Service Manager.vsmdi = Service Manager.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Service Manager.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92882886-D064-4101-8AC8-C2808F723953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92882886-D064-4101-8AC8-C2808F723953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92882886-D064-4101-8AC8-C2808F723953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92882886-D064-4101-8AC8-C2808F723953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{122ED651-D2AC-4D64-B35E-765F37952917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{122ED651-D2AC-4D64-B35E-765F37952917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{122ED651-D2AC-4D64-B35E-765F37952917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{122ED651-D2AC-4D64-B35E-765F37952917}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

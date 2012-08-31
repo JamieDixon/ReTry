@@ -1,0 +1,9 @@
+C:\dev\Repositories\ServiceManager\src\ServiceManager.Tests\bin\Debug\ServiceManager.Tests.dll
+C:\dev\Repositories\ServiceManager\src\ServiceManager.Tests\bin\Debug\ServiceManager.Tests.pdb
+C:\dev\Repositories\ServiceManager\src\ServiceManager.Tests\bin\Debug\Service Manager.dll
+C:\dev\Repositories\ServiceManager\src\ServiceManager.Tests\bin\Debug\Service Manager.pdb
+C:\dev\Repositories\ServiceManager\src\ServiceManager.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\Repositories\ServiceManager\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.dll
+C:\dev\Repositories\ServiceManager\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.pdb
+C:\dev\Repositories\ServiceManager\src\ServiceManager.Tests\obj\Debug\Decl\ServiceManager.Tests.dll
+C:\dev\Repositories\ServiceManager\src\ServiceManager.Tests\obj\Debug\Decl\ServiceManager.Tests.pdb

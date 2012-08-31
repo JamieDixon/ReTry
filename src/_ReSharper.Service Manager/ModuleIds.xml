@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="122ED651-D2AC-4D64-B35E-765F37952917" ModuleId="ServiceManager.Tests" />
+  <Module PersistentId="92882886-D064-4101-8AC8-C2808F723953" ModuleId="Service Manager" />
+  <Module PersistentId="6498FD30-884D-452B-93A4-2B6B5A2027AA" ModuleId="TestProject1" />
+</Modules>
