@@ -7,6 +7,6 @@ If after n times it is still throwing an exception it falls back to executing th
 Uses a fluent interface so you can do stuff like:
 
 	var result = serviceManager
-                    .ExecuteService<string>(() => someService.MakeHttpCall("Foo","Bar") , 3)
+                    .ExecuteService(() => someService.MakeHttpCall("Foo","Bar") , 3)
                     .IfServiceFailsThen(() => new SomeServiceDefaultResult())
                     .Result<SomeServiceResult>();
