@@ -78,7 +78,7 @@ namespace Service_Manager
         /// The attempts.
         /// </param>
         /// <returns>
-        /// The BlinkBox.Client.TescoTV.Services.ServiceManager.IServiceManager.
+        /// The ServiceManager.IServiceManager.
         /// </returns>
         public IServiceManager ExecuteService<TResult>(Func<TResult> action, int attempts)
         {
@@ -99,7 +99,7 @@ namespace Service_Manager
         /// The action.
         /// </param>
         /// <returns>
-        /// The BlinkBox.Client.TescoTV.Services.ServiceManager.IServiceManager`1[TResult -&gt; TResult].
+        /// The ServiceManager.IServiceManager`1[TResult -&gt; TResult].
         /// </returns>
         public IServiceManager IfServiceFailsThen<TResult>(Func<TResult> action)
         {
