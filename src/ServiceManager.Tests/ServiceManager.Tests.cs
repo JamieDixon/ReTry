@@ -33,6 +33,17 @@ namespace ServiceManager.Tests
                 // Assert
                 Assert.AreEqual("Hello World", result);
             }
+
+            [TestMethod]
+            public void New_Instance_Of_ServiceManager_Returned()
+            {
+                // Arrange
+                var serviceManager = new ServiceManager();
+
+                var newServiceManager = serviceManager.ExecuteService(() => "Hello World", 5);
+
+                Assert.AreNotEqual(serviceManager, newServiceManager);
+            }
         }
 
         [TestClass]

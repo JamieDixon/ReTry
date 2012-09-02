@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e959372c-56b3-477b-b3bb-df2cee57bb03" name="Jamie@JAMIE-VAIO 2012-09-01 13:46:47" runUser="JAMIE-VAIO\Jamie" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="67bacfd6-e3f0-4c66-ad16-3c0a8f16e5e2">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Jamie_JAMIE-VAIO 2012-09-01 13_46_47" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-09-01T13:46:47.2815254+01:00" queuing="2012-09-01T13:46:47.5435404+01:00" start="2012-09-01T13:46:47.7045496+01:00" finish="2012-09-01T13:46:47.9135616+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Throws_Exception_If_Called_Before_ExecuteService" storage="c:\repositories\servicemanager\src\servicemanager.tests\bin\debug\servicemanager.tests.dll" id="8e934a81-44cf-0c23-c447-ffb0b77d4832">
+      <Execution timeOut="1800000" id="66219749-0197-4c06-a55e-15ca7374b574" />
+      <TestMethod codeBase="C:/Repositories/ServiceManager/src/ServiceManager.Tests/bin/Debug/ServiceManager.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceManager.Tests.Given_ServiceManager_Instance+When_IfServiceFailsThen_Invoked, ServiceManager.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Throws_Exception_If_Called_Before_ExecuteService" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="8e934a81-44cf-0c23-c447-ffb0b77d4832" executionId="66219749-0197-4c06-a55e-15ca7374b574" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="66219749-0197-4c06-a55e-15ca7374b574" testId="8e934a81-44cf-0c23-c447-ffb0b77d4832" testName="Throws_Exception_If_Called_Before_ExecuteService" computerName="JAMIE-VAIO" duration="00:00:00.0451746" startTime="2012-09-01T13:46:47.7465520+01:00" endTime="2012-09-01T13:46:47.8545582+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66219749-0197-4c06-a55e-15ca7374b574">
+    </UnitTestResult>
+  </Results>
+</TestRun>

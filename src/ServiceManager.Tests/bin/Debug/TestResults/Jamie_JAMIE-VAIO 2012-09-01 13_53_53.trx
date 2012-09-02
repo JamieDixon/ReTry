@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="4f10c627-0eef-4842-92a6-9d077d423e73" name="Jamie@JAMIE-VAIO 2012-09-01 13:53:53" runUser="JAMIE-VAIO\Jamie" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="67bacfd6-e3f0-4c66-ad16-3c0a8f16e5e2">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Jamie_JAMIE-VAIO 2012-09-01 13_53_53" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-09-01T13:53:53.7709192+01:00" queuing="2012-09-01T13:53:54.0359344+01:00" start="2012-09-01T13:53:54.2059441+01:00" finish="2012-09-01T13:53:54.7959778+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="4" executed="4" passed="1" error="0" failed="3" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Passed_Method_Is_Called_When_Exception_On_ExecuteService" storage="c:\repositories\servicemanager\src\servicemanager.tests\bin\debug\servicemanager.tests.dll" id="09ce81c5-9692-fab3-1a0a-be4c85950267">
+      <Execution timeOut="1800000" id="db410191-03f4-4f46-ad01-22a8468f9bb3" />
+      <TestMethod codeBase="C:/Repositories/ServiceManager/src/ServiceManager.Tests/bin/Debug/ServiceManager.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceManager.Tests.Given_ServiceManager_Instance+When_IfServiceFailsThen_Invoked, ServiceManager.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Passed_Method_Is_Called_When_Exception_On_ExecuteService" />
+    </UnitTest>
+    <UnitTest name="Throws_Exception_If_Called_Before_ExecuteService" storage="c:\repositories\servicemanager\src\servicemanager.tests\bin\debug\servicemanager.tests.dll" id="8e934a81-44cf-0c23-c447-ffb0b77d4832">
+      <Execution timeOut="1800000" id="e81de2f0-b7ef-4a0c-9192-f42fcdb35aaf" />
+      <TestMethod codeBase="C:/Repositories/ServiceManager/src/ServiceManager.Tests/bin/Debug/ServiceManager.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceManager.Tests.Given_ServiceManager_Instance+When_IfServiceFailsThen_Invoked, ServiceManager.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Throws_Exception_If_Called_Before_ExecuteService" />
+    </UnitTest>
+    <UnitTest name="Passed_Method_Is_Called" storage="c:\repositories\servicemanager\src\servicemanager.tests\bin\debug\servicemanager.tests.dll" id="59133280-683e-05cb-7e45-f91bd33c82ae">
+      <Execution timeOut="1800000" id="c9fd532e-1ad8-4914-9c73-f16e7fa5ad9e" />
+      <TestMethod codeBase="C:/Repositories/ServiceManager/src/ServiceManager.Tests/bin/Debug/ServiceManager.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceManager.Tests.Given_ServiceManager_Instance+When_ExecuteService_Invoked, ServiceManager.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Passed_Method_Is_Called" />
+    </UnitTest>
+    <UnitTest name="Result_Contains_Last_IfServiceFailsThen_Method_Result" storage="c:\repositories\servicemanager\src\servicemanager.tests\bin\debug\servicemanager.tests.dll" id="4f7da121-c674-4f34-57ce-a3ab684edb9d">
+      <Execution timeOut="1800000" id="51e247ed-7849-4c4c-89c9-3f746c04c273" />
+      <TestMethod codeBase="C:/Repositories/ServiceManager/src/ServiceManager.Tests/bin/Debug/ServiceManager.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceManager.Tests.Given_ServiceManager_Instance+When_Result_Invoked, ServiceManager.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Contains_Last_IfServiceFailsThen_Method_Result" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="59133280-683e-05cb-7e45-f91bd33c82ae" executionId="c9fd532e-1ad8-4914-9c73-f16e7fa5ad9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09ce81c5-9692-fab3-1a0a-be4c85950267" executionId="db410191-03f4-4f46-ad01-22a8468f9bb3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e934a81-44cf-0c23-c447-ffb0b77d4832" executionId="e81de2f0-b7ef-4a0c-9192-f42fcdb35aaf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f7da121-c674-4f34-57ce-a3ab684edb9d" executionId="51e247ed-7849-4c4c-89c9-3f746c04c273" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="c9fd532e-1ad8-4914-9c73-f16e7fa5ad9e" testId="59133280-683e-05cb-7e45-f91bd33c82ae" testName="Passed_Method_Is_Called" computerName="JAMIE-VAIO" duration="00:00:00.4130206" startTime="2012-09-01T13:53:54.2489466+01:00" endTime="2012-09-01T13:53:54.7129731+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9fd532e-1ad8-4914-9c73-f16e7fa5ad9e">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceManager.Tests.Given_ServiceManager_Instance+When_ExecuteService_Invoked.Passed_Method_Is_Called threw exception: 
+System.Exception: You must call the ExecService method before IfServiceFailsThen</Message>
+          <StackTrace>    at Service_Manager.ServiceManager.CheckPreconditions() in C:\Repositories\ServiceManager\src\ServiceManager\ServiceManager.cs:line 180
+   at Service_Manager.ServiceManager.Execute[TResult]() in C:\Repositories\ServiceManager\src\ServiceManager\ServiceManager.cs:line 151
+   at Service_Manager.ServiceManager.Result[TResult]() in C:\Repositories\ServiceManager\src\ServiceManager\ServiceManager.cs:line 95
+   at ServiceManager.Tests.Given_ServiceManager_Instance.When_ExecuteService_Invoked.Passed_Method_Is_Called() in C:\Repositories\ServiceManager\src\ServiceManager.Tests\ServiceManager.Tests.cs:line 31
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="db410191-03f4-4f46-ad01-22a8468f9bb3" testId="09ce81c5-9692-fab3-1a0a-be4c85950267" testName="Passed_Method_Is_Called_When_Exception_On_ExecuteService" computerName="JAMIE-VAIO" duration="00:00:00.0235890" startTime="2012-09-01T13:53:54.7159733+01:00" endTime="2012-09-01T13:53:54.7399746+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db410191-03f4-4f46-ad01-22a8468f9bb3">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceManager.Tests.Given_ServiceManager_Instance+When_IfServiceFailsThen_Invoked.Passed_Method_Is_Called_When_Exception_On_ExecuteService threw exception: 
+System.Exception: You must call the ExecService method before IfServiceFailsThen</Message>
+          <StackTrace>    at Service_Manager.ServiceManager.CheckPreconditions() in C:\Repositories\ServiceManager\src\ServiceManager\ServiceManager.cs:line 180
+   at Service_Manager.ServiceManager.Execute[TResult]() in C:\Repositories\ServiceManager\src\ServiceManager\ServiceManager.cs:line 151
+   at Service_Manager.ServiceManager.Result[TResult]() in C:\Repositories\ServiceManager\src\ServiceManager\ServiceManager.cs:line 95
+   at ServiceManager.Tests.Given_ServiceManager_Instance.When_IfServiceFailsThen_Invoked.Passed_Method_Is_Called_When_Exception_On_ExecuteService() in C:\Repositories\ServiceManager\src\ServiceManager.Tests\ServiceManager.Tests.cs:line 48
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e81de2f0-b7ef-4a0c-9192-f42fcdb35aaf" testId="8e934a81-44cf-0c23-c447-ffb0b77d4832" testName="Throws_Exception_If_Called_Before_ExecuteService" computerName="JAMIE-VAIO" duration="00:00:00.0009951" startTime="2012-09-01T13:53:54.7419748+01:00" endTime="2012-09-01T13:53:54.7439749+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e81de2f0-b7ef-4a0c-9192-f42fcdb35aaf">
+    </UnitTestResult>
+    <UnitTestResult executionId="51e247ed-7849-4c4c-89c9-3f746c04c273" testId="4f7da121-c674-4f34-57ce-a3ab684edb9d" testName="Result_Contains_Last_IfServiceFailsThen_Method_Result" computerName="JAMIE-VAIO" duration="00:00:00.0019984" startTime="2012-09-01T13:53:54.7459750+01:00" endTime="2012-09-01T13:53:54.7479751+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="51e247ed-7849-4c4c-89c9-3f746c04c273">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method ServiceManager.Tests.Given_ServiceManager_Instance+When_Result_Invoked.Result_Contains_Last_IfServiceFailsThen_Method_Result threw exception: 
+System.Exception: You must call the ExecService method before IfServiceFailsThen</Message>
+          <StackTrace>    at Service_Manager.ServiceManager.CheckPreconditions() in C:\Repositories\ServiceManager\src\ServiceManager\ServiceManager.cs:line 180
+   at Service_Manager.ServiceManager.Execute[TResult]() in C:\Repositories\ServiceManager\src\ServiceManager\ServiceManager.cs:line 151
+   at Service_Manager.ServiceManager.Result[TResult]() in C:\Repositories\ServiceManager\src\ServiceManager\ServiceManager.cs:line 95
+   at ServiceManager.Tests.Given_ServiceManager_Instance.When_Result_Invoked.Result_Contains_Last_IfServiceFailsThen_Method_Result() in C:\Repositories\ServiceManager\src\ServiceManager.Tests\ServiceManager.Tests.cs:line 91
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

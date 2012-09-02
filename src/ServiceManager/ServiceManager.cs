@@ -7,6 +7,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Threading;
+
 namespace Service_Manager
 {
     using System;
@@ -58,7 +60,9 @@ namespace Service_Manager
         /// </returns>
         public TResult Result<TResult>()
         {
-            return this.Execute<TResult>();
+            var result = this.Execute<TResult>();
+
+            return result;
         }
 
         /// <summary>
@@ -78,12 +82,11 @@ namespace Service_Manager
         /// </returns>
         public IServiceManager ExecuteService<TResult>(Func<TResult> action, int attempts)
         {
-            this.ServiceFunc = (dynamic)action;
-            this.count = 0;
-            this.attemptsAllowed = attempts;
-            this.Failed = false;
+            var serviceManager  = (ServiceManager)this.Clone();
+            serviceManager.ServiceFunc = (dynamic)action;
+            serviceManager.attemptsAllowed = attempts;
 
-            return this;
+            return serviceManager;
         }
 
         /// <summary>
@@ -100,8 +103,21 @@ namespace Service_Manager
         /// </returns>
         public IServiceManager IfServiceFailsThen<TResult>(Func<TResult> action)
         {
-            this.failedFuncs.Add((dynamic)action);
-            return this;
+            var serviceManager = (ServiceManager)this.Clone();
+            serviceManager.failedFuncs.Add((dynamic)action);
+            return serviceManager;
+        }
+
+
+        /// <summary>
+        /// Clones the current instance of ServiceManager.
+        /// </summary>
+        /// <returns>
+        /// An object reprisenting a clone of the current ServiceManager.
+        /// </returns>
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
 
         /// <summary>
@@ -113,7 +129,7 @@ namespace Service_Manager
         /// <returns>
         /// The TResult.
         /// </returns>
-        public TResult Execute<TResult>()
+        private TResult Execute<TResult>()
         {
             return this
                 .ExecuteServiceImplimentation(this.ServiceFunc, this.attemptsAllowed)
@@ -158,6 +174,9 @@ namespace Service_Manager
             {
                 if (this.count <= attempts)
                 {
+                    // Wait half a second then re-try.
+                    Thread.Sleep(500);
+
                     this.ExecuteServiceImplimentation(action, attempts);
                 }
                 else

@@ -14,7 +14,7 @@ namespace Service_Manager
     /// <summary>
     /// The ServiceManager interface.
     /// </summary>
-    public interface IServiceManager
+    public interface IServiceManager : ICloneable 
     {
         /// <summary>
         /// The result of the service call.

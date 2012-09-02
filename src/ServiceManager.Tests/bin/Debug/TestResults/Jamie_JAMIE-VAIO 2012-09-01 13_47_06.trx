@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="45da236b-367f-46cb-b5b0-588f2b2210f8" name="Jamie@JAMIE-VAIO 2012-09-01 13:47:06" runUser="JAMIE-VAIO\Jamie" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="67bacfd6-e3f0-4c66-ad16-3c0a8f16e5e2">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Jamie_JAMIE-VAIO 2012-09-01 13_47_06" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-09-01T13:47:06.5676285+01:00" queuing="2012-09-01T13:47:06.8386440+01:00" start="2012-09-01T13:47:07.0036535+01:00" finish="2012-09-01T13:47:08.6177458+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Passed_Method_Is_Called_When_Exception_On_ExecuteService" storage="c:\repositories\servicemanager\src\servicemanager.tests\bin\debug\servicemanager.tests.dll" id="09ce81c5-9692-fab3-1a0a-be4c85950267">
+      <Execution timeOut="1800000" id="a84dbdd9-5341-414d-9d5f-987519797fd5" />
+      <TestMethod codeBase="C:/Repositories/ServiceManager/src/ServiceManager.Tests/bin/Debug/ServiceManager.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceManager.Tests.Given_ServiceManager_Instance+When_IfServiceFailsThen_Invoked, ServiceManager.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Passed_Method_Is_Called_When_Exception_On_ExecuteService" />
+    </UnitTest>
+    <UnitTest name="Throws_Exception_If_Called_Before_ExecuteService" storage="c:\repositories\servicemanager\src\servicemanager.tests\bin\debug\servicemanager.tests.dll" id="8e934a81-44cf-0c23-c447-ffb0b77d4832">
+      <Execution timeOut="1800000" id="2fbe54ee-4de4-4e55-b3ba-28d5e4662e57" />
+      <TestMethod codeBase="C:/Repositories/ServiceManager/src/ServiceManager.Tests/bin/Debug/ServiceManager.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceManager.Tests.Given_ServiceManager_Instance+When_IfServiceFailsThen_Invoked, ServiceManager.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Throws_Exception_If_Called_Before_ExecuteService" />
+    </UnitTest>
+    <UnitTest name="Passed_Method_Is_Called" storage="c:\repositories\servicemanager\src\servicemanager.tests\bin\debug\servicemanager.tests.dll" id="59133280-683e-05cb-7e45-f91bd33c82ae">
+      <Execution timeOut="1800000" id="d8dff883-afcf-4ad1-b8c4-a1bd9136cd9e" />
+      <TestMethod codeBase="C:/Repositories/ServiceManager/src/ServiceManager.Tests/bin/Debug/ServiceManager.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceManager.Tests.Given_ServiceManager_Instance+When_ExecuteService_Invoked, ServiceManager.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Passed_Method_Is_Called" />
+    </UnitTest>
+    <UnitTest name="Result_Contains_Last_IfServiceFailsThen_Method_Result" storage="c:\repositories\servicemanager\src\servicemanager.tests\bin\debug\servicemanager.tests.dll" id="4f7da121-c674-4f34-57ce-a3ab684edb9d">
+      <Execution timeOut="1800000" id="343feaa2-de02-4d78-9e07-df4f9f6c07eb" />
+      <TestMethod codeBase="C:/Repositories/ServiceManager/src/ServiceManager.Tests/bin/Debug/ServiceManager.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServiceManager.Tests.Given_ServiceManager_Instance+When_Result_Invoked, ServiceManager.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Contains_Last_IfServiceFailsThen_Method_Result" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="59133280-683e-05cb-7e45-f91bd33c82ae" executionId="d8dff883-afcf-4ad1-b8c4-a1bd9136cd9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09ce81c5-9692-fab3-1a0a-be4c85950267" executionId="a84dbdd9-5341-414d-9d5f-987519797fd5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e934a81-44cf-0c23-c447-ffb0b77d4832" executionId="2fbe54ee-4de4-4e55-b3ba-28d5e4662e57" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f7da121-c674-4f34-57ce-a3ab684edb9d" executionId="343feaa2-de02-4d78-9e07-df4f9f6c07eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d8dff883-afcf-4ad1-b8c4-a1bd9136cd9e" testId="59133280-683e-05cb-7e45-f91bd33c82ae" testName="Passed_Method_Is_Called" computerName="JAMIE-VAIO" duration="00:00:00.4189732" startTime="2012-09-01T13:47:07.0476560+01:00" endTime="2012-09-01T13:47:07.5186829+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8dff883-afcf-4ad1-b8c4-a1bd9136cd9e">
+    </UnitTestResult>
+    <UnitTestResult executionId="a84dbdd9-5341-414d-9d5f-987519797fd5" testId="09ce81c5-9692-fab3-1a0a-be4c85950267" testName="Passed_Method_Is_Called_When_Exception_On_ExecuteService" computerName="JAMIE-VAIO" duration="00:00:00.5143346" startTime="2012-09-01T13:47:07.5216831+01:00" endTime="2012-09-01T13:47:08.0367125+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a84dbdd9-5341-414d-9d5f-987519797fd5">
+    </UnitTestResult>
+    <UnitTestResult executionId="2fbe54ee-4de4-4e55-b3ba-28d5e4662e57" testId="8e934a81-44cf-0c23-c447-ffb0b77d4832" testName="Throws_Exception_If_Called_Before_ExecuteService" computerName="JAMIE-VAIO" duration="00:00:00.0007441" startTime="2012-09-01T13:47:08.0397127+01:00" endTime="2012-09-01T13:47:08.0407128+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2fbe54ee-4de4-4e55-b3ba-28d5e4662e57">
+    </UnitTestResult>
+    <UnitTestResult executionId="343feaa2-de02-4d78-9e07-df4f9f6c07eb" testId="4f7da121-c674-4f34-57ce-a3ab684edb9d" testName="Result_Contains_Last_IfServiceFailsThen_Method_Result" computerName="JAMIE-VAIO" duration="00:00:00.5005226" startTime="2012-09-01T13:47:08.0487132+01:00" endTime="2012-09-01T13:47:08.5557422+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="343feaa2-de02-4d78-9e07-df4f9f6c07eb">
+    </UnitTestResult>
+  </Results>
+</TestRun>

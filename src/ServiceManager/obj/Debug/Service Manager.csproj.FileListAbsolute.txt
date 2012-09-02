@@ -5,3 +5,7 @@ C:\dev\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Service Manager.
 C:\dev\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Service Manager.pdb
 C:\dev\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Decl\Service Manager.dll
 C:\dev\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Decl\Service Manager.pdb
+C:\Repositories\ServiceManager\src\ServiceManager\bin\Debug\Service Manager.dll
+C:\Repositories\ServiceManager\src\ServiceManager\bin\Debug\Service Manager.pdb
+C:\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Service Manager.dll
+C:\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Service Manager.pdb
