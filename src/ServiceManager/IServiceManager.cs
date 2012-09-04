@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IServiceManager.cs" company="blinkBox Entertainment Ltd.">
-//   Copyright (c) blinkBox Entertainment Ltd. All rights reserved.
+// <copyright file="IServiceManager.cs" company="Jamie Dixon">
+//   Copyright (c) Jamie Dixon. All rights reserved.
 // </copyright>
 // <summary>
 //   The ServiceManager interface.
@@ -40,7 +40,7 @@ namespace Service_Manager
         /// The attempts.
         /// </param>
         /// <returns>
-        /// The BlinkBox.Client.TescoTV.Services.ServiceManager.IServiceManager`1[TResult -&gt; TResult].
+        /// The IServiceManager`1[TResult -&gt; TResult].
         /// </returns>
         IServiceManager ExecuteService<TResult>(Func<TResult> action, int attempts);
 
@@ -54,7 +54,7 @@ namespace Service_Manager
         /// The action.
         /// </param>
         /// <returns>
-        /// The BlinkBox.Client.TescoTV.Services.ServiceManager.IServiceManager`1[TResult -&gt; TResult].
+        /// IServiceManager`1[TResult -&gt; TResult].
         /// </returns>
         IServiceManager IfServiceFailsThen<TResult>(Func<TResult> action);
     }
