@@ -8,5 +8,5 @@ Uses a fluent interface so you can do stuff like:
 
 	var result = serviceManager
                     .ExecuteService(() => someService.MakeHttpCall("Foo","Bar") , 3)
-                    .IfServiceFailsThen(() => new SomeServiceDefaultResult())
+                    .IfServiceFailsThen((exception) => new SomeServiceDefaultResult())
                     .Result<SomeServiceResult>();
