@@ -3,7 +3,7 @@
 //   Copyright (c) Jamie Dixon. All rights reserved.
 // </copyright>
 // <summary>
-//   The ServiceManager interface.
+//   Allows a service to be called and manages faiures allowing for re-tries and failover functionality.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -12,7 +12,7 @@ namespace Service_Manager
     using System;
 
     /// <summary>
-    /// The ServiceManager interface.
+    ///   Allows a service to be called and manages faiures allowing for re-tries and failover functionality.
     /// </summary>
     public interface IServiceManager : ICloneable 
     {
@@ -39,10 +39,13 @@ namespace Service_Manager
         /// <param name="attempts">
         /// The attempts.
         /// </param>
+        /// <param name="timeoutMilliseconds">
+        ///  The number of milliseconds between execute attempts.
+        /// </param>
         /// <returns>
         /// The IServiceManager`1[TResult -&gt; TResult].
         /// </returns>
-        IServiceManager ExecuteService<TResult>(Func<TResult> action, int attempts);
+        IServiceManager ExecuteService<TResult>(Func<TResult> action, int attempts, int timeoutMilliseconds);
 
         /// <summary>
         /// The if service fails.
@@ -56,6 +59,6 @@ namespace Service_Manager
         /// <returns>
         /// IServiceManager`1[TResult -&gt; TResult].
         /// </returns>
-        IServiceManager IfServiceFailsThen<TResult>(Func<TResult> action);
+        IServiceManager IfServiceFailsThen<TResult>(Func<Exception, TResult> action);
     }
 }

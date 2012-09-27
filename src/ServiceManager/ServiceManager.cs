@@ -3,26 +3,25 @@
 //   Copyright (c) Jamie Dixon. All rights reserved.
 // </copyright>
 // <summary>
-//   TODO: Update summary.
+//   Allows a service to be called and manages faiures allowing for re-tries and failover functionality.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-using System.Threading;
 
 namespace Service_Manager
 {
     using System;
     using System.Collections.Generic;
+    using System.Threading;
 
     /// <summary>
-    /// TODO: Update summary.
+    ///  Allows a service to be called and manages faiures allowing for re-tries and failover functionality.
     /// </summary>
     public class ServiceManager : IServiceManager
     {
         /// <summary>
         /// A collection of Funcs to execute if the service fails.
         /// </summary>
-        private readonly List<Func<dynamic>> failedFuncs = new List<Func<dynamic>>();
+        private readonly List<Func<Exception, dynamic>> failedFuncs = new List<Func<Exception, dynamic>>();
 
         /// <summary>
         /// The number of times the service call has been attempted.
@@ -33,6 +32,16 @@ namespace Service_Manager
         /// The number of times to re-try the service if it fails.
         /// </summary>
         private int attemptsAllowed;
+
+        /// <summary>
+        /// The exception that was thrown.
+        /// </summary>
+        private Exception exception;
+
+        /// <summary>
+        /// Gets or sets the millisecond timeout.
+        /// </summary>
+        private int millisecondTimeout;
 
         /// <summary>
         /// Gets or sets a value indicating whether failed.
@@ -77,15 +86,18 @@ namespace Service_Manager
         /// <param name="attempts">
         /// The attempts.
         /// </param>
+        /// <param name="timeoutMilliseconds">
+        /// The timeout Milliseconds.
+        /// </param>
         /// <returns>
         /// The ServiceManager.IServiceManager.
         /// </returns>
-        public IServiceManager ExecuteService<TResult>(Func<TResult> action, int attempts)
+        public IServiceManager ExecuteService<TResult>(Func<TResult> action, int attempts, int timeoutMilliseconds = 500)
         {
             var serviceManager  = (ServiceManager)this.Clone();
             serviceManager.ServiceFunc = (dynamic)action;
             serviceManager.attemptsAllowed = attempts;
-
+            serviceManager.millisecondTimeout = timeoutMilliseconds;
             return serviceManager;
         }
 
@@ -101,7 +113,7 @@ namespace Service_Manager
         /// <returns>
         /// The ServiceManager.IServiceManager`1[TResult -&gt; TResult].
         /// </returns>
-        public IServiceManager IfServiceFailsThen<TResult>(Func<TResult> action)
+        public IServiceManager IfServiceFailsThen<TResult>(Func<Exception, TResult> action)
         {
             var serviceManager = (ServiceManager)this.Clone();
             serviceManager.failedFuncs.Add((dynamic)action);
@@ -143,7 +155,7 @@ namespace Service_Manager
         {
             foreach (var func in this.failedFuncs)
             {
-                this.ResultImplimentation = func();
+                this.ResultImplimentation = func(this.exception);
             }
         }
 
@@ -170,17 +182,18 @@ namespace Service_Manager
             {
                 this.ResultImplimentation = action();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 if (this.count <= attempts)
                 {
                     // Wait half a second then re-try.
-                    Thread.Sleep(500);
+                    Thread.Sleep(this.millisecondTimeout);
 
                     this.ExecuteServiceImplimentation(action, attempts);
                 }
                 else
                 {
+                    this.exception = ex;
                     this.ExecuteFailedFuncs();
                 }
             }

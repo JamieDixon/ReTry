@@ -58,7 +58,7 @@ namespace ServiceManager.Tests
                 // Act
                 var result = serviceManager
                     .ExecuteService<string>(() => { throw new Exception("Boom"); }, 1)
-                    .IfServiceFailsThen(() => "Hello World")
+                    .IfServiceFailsThen((exception) => "Hello World")
                     .Result<string>();
 
                 // Assert
@@ -78,9 +78,9 @@ namespace ServiceManager.Tests
                 // Act
                 var result = serviceManager
                     .ExecuteService<string>(() => { throw new Exception("Boom"); }, 1)
-                    .IfServiceFailsThen(() => "Hello World")
-                    .IfServiceFailsThen(() => "You Rock")
-                    .IfServiceFailsThen(() => "My World!")
+                    .IfServiceFailsThen((exception) => "Hello World")
+                    .IfServiceFailsThen((exception) => "You Rock")
+                    .IfServiceFailsThen((exception) => "My World!")
                     .Result<string>();
                 
                 // Assert
