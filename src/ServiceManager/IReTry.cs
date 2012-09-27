@@ -37,7 +37,7 @@ namespace ReTry.Service
         /// <returns>
         /// The IReTry`1[TResult -&gt; TResult].
         /// </returns>
-        IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, int attempts, int timeoutMilliseconds);
+        IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, int attempts, int timeoutMilliseconds = 500);
     }
 
     /// <summary>
