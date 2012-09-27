@@ -1,12 +1,13 @@
-It's a service manager that needs a much better name o_0
+ReTry gives you the ability to have service calls retried n-number of times before failing.
 
-Basically this class lets you pass it a method to execute and it tries n number of times to execute the method.
+This can be useful when making calls over the internet or to a database and you don't want a temporary interuption to raise an exception without first trying a couple of more times.
 
-If after n times it is still throwing an exception it falls back to executing the methods you define in the IfServiceFailsThen method.
+ReTry lets you decide how to handle specific exception types if the service fails so that you can perform different actions.
 
 Uses a fluent interface so you can do stuff like:
 
+    // Make a service call and try 3 times if an exception is raised. After 3 attempts, return a redirect.
 	var result = serviceManager
-                    .ExecuteService(() => someService.MakeHttpCall("Foo","Bar") , 3)
-                    .IfServiceFailsThen((exception) => new SomeServiceDefaultResult())
-                    .Result<SomeServiceResult>();
+                    .ExecuteService<ServiceResult, RedirectResult>(() => someService.MakeHttpCall("Foo","Bar") , 3)
+                    .IfServiceFailsThen<HttpFailedException>(() => RedirectSomewhereElse())
+                    .Result();
