@@ -10,10 +10,11 @@
 namespace ServiceManager.Tests
 {
     using System;
+    using System.IO;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    using Service_Manager;
+    using ReTry.Service;
+    using ReTry.Service.Exceptions;
 
     [TestClass]
     public class Given_ServiceManager_Instance
@@ -25,22 +26,24 @@ namespace ServiceManager.Tests
             public void Passed_Method_Is_Called()
             {
                 // Arrange
-                var serviceManager = new ServiceManager();
+                var serviceManager = new ReTry();
 
                 // Act
-                var result = serviceManager.ExecuteService(() => "Hello World", 5).Result<string>();
+                var result = serviceManager
+                    .ExecuteService<string, string>(() => "Hello World", 5)
+                    .Result();
 
                 // Assert
-                Assert.AreEqual("Hello World", result);
+                Assert.AreEqual("Hello World", result.Result);
             }
 
             [TestMethod]
             public void New_Instance_Of_ServiceManager_Returned()
             {
                 // Arrange
-                var serviceManager = new ServiceManager();
+                var serviceManager = new ReTry();
 
-                var newServiceManager = serviceManager.ExecuteService(() => "Hello World", 5);
+                var newServiceManager = serviceManager.ExecuteService<string, string>(() => "Hello World", 5);
 
                 Assert.AreNotEqual(serviceManager, newServiceManager);
             }
@@ -53,38 +56,52 @@ namespace ServiceManager.Tests
             public void Passed_Method_Is_Called_When_Exception_On_ExecuteService()
             {
                 // Arrange
-                var serviceManager = new ServiceManager();
+                var serviceManager = new ReTry();
 
                 // Act
                 var result = serviceManager
-                    .ExecuteService<string>(() => { throw new Exception("Boom"); }, 1)
-                    .IfServiceFailsThen((exception) => "Hello World")
-                    .Result<string>();
+                    .ExecuteService<string, string>(() => { throw new DirectoryNotFoundException("Boom"); })
+                    .IfServiceFailsThen<DirectoryNotFoundException>(exception => "Hello World")
+                    .Result();
 
                 // Assert
-                Assert.AreEqual("Hello World", result);
+                Assert.AreEqual("Hello World", result.FailureResult);
             }
-        }
 
-        [TestClass]
-        public class When_Result_Invoked
-        {
             [TestMethod]
-            public void Result_Contains_Last_IfServiceFailsThen_Method_Result()
+            public void Less_Specific_Exception_Caught_When_More_Specific_Exception_Occurs()
             {
                 // Arrange
-                var serviceManager = new ServiceManager();
+                var serviceManager = new ReTry();
 
                 // Act
                 var result = serviceManager
-                    .ExecuteService<string>(() => { throw new Exception("Boom"); }, 1)
-                    .IfServiceFailsThen((exception) => "Hello World")
-                    .IfServiceFailsThen((exception) => "You Rock")
-                    .IfServiceFailsThen((exception) => "My World!")
-                    .Result<string>();
-                
+                    .ExecuteService<string, string>(() => { throw new DirectoryNotFoundException("Boom"); })
+                    .IfServiceFailsThen<Exception>(exception => "Hello World")
+                    .Result();
+
                 // Assert
-                Assert.AreEqual("My World!", result);
+                Assert.AreEqual("Hello World", result.FailureResult);
+            }
+
+            [ExpectedException(typeof(UnspecifiedExceptionHandler))]
+            [TestMethod]
+            public void Exception_Is_Not_Specified_For_Handling_Returns_UnspecifiedExceptionHandler_Exception()
+            {
+                // Arrange
+                var serviceManager = new ReTry();
+
+                try
+                {
+                    var result = serviceManager
+                    .ExecuteService<string, string>(() => { throw new Exception("Boom"); })
+                    .Result();
+                    Assert.Fail("We should not get here");
+                }
+                catch (Exception ex)
+                {
+                    Assert.AreEqual("No handler was found for the exception that was thrown. Make sure you've specified a handler through the IfServiceFailsThen method for this exception.", ex.Message);
+                }
             }
         }
     }

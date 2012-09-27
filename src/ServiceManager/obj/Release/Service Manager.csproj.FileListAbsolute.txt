@@ -1,0 +1,5 @@
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Release\ResolveAssemblyReference.cache
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\bin\Release\ReTry.dll
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\bin\Release\ReTry.pdb
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Release\ReTry.dll
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Release\ReTry.pdb

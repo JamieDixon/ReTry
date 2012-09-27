@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ReTry</id>
+    <version>$version$</version>
+    <title>ReTry</title>
+    <authors>Jamie Dixon</authors>
+    <owners>Jamie Dixon</owners>
+    <projectUrl>https://github.com/JamieDixon/ReTry</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Allows a service to be called and manages faiures allowing for re-tries and failover functionality.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>C#</tags>
+  </metadata>
+</package>
