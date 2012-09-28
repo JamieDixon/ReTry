@@ -14,3 +14,8 @@ C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\bin\Debug\R
 C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\bin\Debug\ReTry.pdb
 C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Debug\ReTry.dll
 C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Debug\ReTry.pdb
+C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\bin\Debug\ReTry.dll
+C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\bin\Debug\ReTry.pdb
+C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\obj\Debug\ReTry.dll
+C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\obj\Debug\ReTry.pdb

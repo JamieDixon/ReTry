@@ -14,30 +14,47 @@ namespace ReTry.Service
     /// <summary>
     ///   Allows a service to be called and manages faiures allowing for re-tries and failover functionality.
     /// </summary>
-    public interface IReTry : ICloneable 
+    public interface IReTry : ICloneable
     {
         /// <summary>
-        /// The execute service implimentation.
+        /// Executes the service.
         /// </summary>
-        /// <typeparam name="TSuccess">
-        /// The success return type.
-        /// </typeparam>
-        /// <typeparam name="TFailure">
-        /// The failure return type.
-        /// </typeparam>
-        /// <param name="action">
-        /// The action.
-        /// </param>
-        /// <param name="attempts">
-        /// The attempts.
-        /// </param>
-        /// <param name="timeoutMilliseconds">
-        /// The number of milliseconds between execute attempts.
-        /// </param>
-        /// <returns>
-        /// The IReTry`1[TResult -&gt; TResult].
-        /// </returns>
-        IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, int attempts, int timeoutMilliseconds = 500);
+        /// <typeparam name="TSuccess">The type of the success.</typeparam>
+        /// <typeparam name="TFailure">The type of the failure.</typeparam>
+        /// <param name="action">The action.</param>
+        /// <param name="timeout">The timeout.</param>
+        /// <param name="attempts">The attempts.</param>
+        /// <returns></returns>
+        IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, TimeSpan timeout, int attempts = 1);
+
+        /// <summary>
+        /// Executes the service.
+        /// </summary>
+        /// <typeparam name="TSuccess">The type of the success.</typeparam>
+        /// <typeparam name="TFailure">The type of the failure.</typeparam>
+        /// <param name="action">The action.</param>
+        /// <param name="attempts">The attempts.</param>
+        /// <returns></returns>
+        IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, int attempts = 1);
+
+        /// <summary>
+        /// Executes the service.
+        /// </summary>
+        /// <typeparam name="TResult">The type of the result.</typeparam>
+        /// <param name="action">The action.</param>
+        /// <param name="timeout">The timeout.</param>
+        /// <param name="attempts">The attempts.</param>
+        /// <returns></returns>
+        IReTry<TResult, TResult> ExecuteService<TResult>(Func<TResult> action, TimeSpan timeout, int attempts = 1);
+
+        /// <summary>
+        /// Executes the service.
+        /// </summary>
+        /// <typeparam name="TResult">The type of the result.</typeparam>
+        /// <param name="action">The action.</param>
+        /// <param name="attempts">The attempts.</param>
+        /// <returns></returns>
+        IReTry<TResult, TResult> ExecuteService<TResult>(Func<TResult> action, int attempts = 1);
     }
 
     /// <summary>
@@ -54,12 +71,8 @@ namespace ReTry.Service
         /// <summary>
         /// The if service fails then.
         /// </summary>
-        /// <typeparam name="TExceptionType">
-        /// Exception type to handle.
-        /// </typeparam>
-        /// <param name="action">
-        /// The action.
-        /// </param>
+        /// <typeparam name="TExceptionType">Exception type to handle.</typeparam>
+        /// <param name="action">The action.</param>
         /// <returns>
         /// The ReTry.Service.IReTry`2[TSuccess -&gt; TSuccess, TFailure -&gt; TFailure].
         /// </returns>
