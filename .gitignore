@@ -1,0 +1,8 @@
+#we dont want compiled/binary stuff in repo
+
+*.exe
+*.dll
+*.pdb
+*.dat
+*.bin
+*.cache

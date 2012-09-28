@@ -13,8 +13,8 @@ namespace ServiceManager.Tests
     using System.IO;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using ReTry.Service;
-    using ReTry.Service.Exceptions;
+    using global::ReTry.Service;
+    using global::ReTry.Service.Exceptions;
 
     [TestClass]
     public class Given_ServiceManager_Instance
