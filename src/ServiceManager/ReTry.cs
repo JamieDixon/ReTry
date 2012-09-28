@@ -21,30 +21,61 @@ namespace ReTry.Service
     public class ReTry : IReTry
     {
         /// <summary>
+        /// default attempts.
+        /// </summary>
+        private const int DefaultAttempts = 1;
+
+        /// <summary>
         /// The execute service.
         /// </summary>
-        /// <typeparam name="TSuccess">
-        /// Success type.
-        /// </typeparam>
-        /// <typeparam name="TFailure">
-        /// Failure type.
-        /// </typeparam>
-        /// <param name="action">
-        /// The action.
-        /// </param>
-        /// <param name="attempts">
-        /// The attempts.
-        /// </param>
-        /// <param name="timeoutMilliseconds">
-        /// The timeout Milliseconds.
-        /// </param>
-        /// <returns>
-        /// The ReTry.IReTry.
-        /// </returns>
-        public IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, int attempts = 1, int timeoutMilliseconds = 500)
+        /// <typeparam name="TSuccess">Success type.</typeparam>
+        /// <typeparam name="TFailure">Failure type.</typeparam>
+        /// <param name="action">The action.</param>
+        /// <param name="timeout">The timeout.</param>
+        /// <param name="attempts">The attempts.</param>
+        /// <returns>The ReTry.IReTry.</returns>
+        public IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, TimeSpan timeout, int attempts = DefaultAttempts)
         {
-            var serviceManager = new ReTry<TSuccess, TFailure>(action, attempts, timeoutMilliseconds);
+            var serviceManager = new ReTry<TSuccess, TFailure>(action, timeout, attempts);
             return serviceManager;
+        }
+
+        /// <summary>
+        /// Executes the service.
+        /// </summary>
+        /// <typeparam name="TSuccess">The type of the success.</typeparam>
+        /// <typeparam name="TFailure">The type of the failure.</typeparam>
+        /// <param name="action">The action.</param>
+        /// <param name="attempts">The attempts.</param>
+        /// <returns></returns>
+        public IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, int attempts = DefaultAttempts)
+        {
+            return this.ExecuteService<TSuccess, TFailure>(action, TimeSpan.Zero, attempts);
+        }
+
+        /// <summary>
+        /// Executes the service.
+        /// </summary>
+        /// <typeparam name="TResult">The type of the result.</typeparam>
+        /// <param name="action">The action.</param>
+        /// <param name="timeout">The timeout.</param>
+        /// <param name="attempts">The attempts.</param>
+        /// <returns></returns>
+        public IReTry<TResult, TResult> ExecuteService<TResult>(Func<TResult> action, TimeSpan timeout, int attempts = DefaultAttempts)
+        {
+            return this.ExecuteService<TResult, TResult>(action, timeout, attempts);
+        }
+
+        /// <summary>
+        /// Executes the service.
+        /// </summary>
+        /// <typeparam name="TResult">The type of the result.</typeparam>
+        /// <param name="action">The action.</param>
+        /// <param name="attempts">The attempts.</param>
+        /// <returns></returns>
+        public IReTry<TResult, TResult> ExecuteService<TResult>(Func<TResult> action, int attempts = DefaultAttempts)
+        {
+            return this.ExecuteService<TResult, TResult>(action, TimeSpan.Zero, attempts);
         }
 
         /// <summary>
@@ -78,7 +109,7 @@ namespace ReTry.Service
         /// <summary>
         /// Gets or sets the millisecond timeout.
         /// </summary>
-        private readonly int millisecondTimeout;
+        private readonly TimeSpan timeOut;
 
         /// <summary>
         /// The number of times to re-try the service if it fails.
@@ -98,20 +129,14 @@ namespace ReTry.Service
         /// <summary>
         /// Initializes a new instance of the <see cref="ReTry{TSuccess,TFailure}"/> class.
         /// </summary>
-        /// <param name="serviceFunc">
-        /// The service func.
-        /// </param>
-        /// <param name="attempts">
-        /// The attempts.
-        /// </param>
-        /// <param name="millisecondTimeout">
-        /// The millisecond timeout.
-        /// </param>
-        public ReTry(Func<TSuccess> serviceFunc, int attempts, int millisecondTimeout)
+        /// <param name="serviceFunc">The service func.</param>
+        /// <param name="timeout">The timeout.</param>
+        /// <param name="attempts">The attempts.</param>
+        internal ReTry(Func<TSuccess> serviceFunc, TimeSpan timeout, int attempts)
         {
             this.ServiceFunc = serviceFunc;
             this.attemptsAllowed = attempts;
-            this.millisecondTimeout = millisecondTimeout;
+            this.timeOut = timeout;
         }
 
         /// <summary>
@@ -169,7 +194,7 @@ namespace ReTry.Service
                 if (this.count < this.attemptsAllowed)
                 {
                     // Wait half a second then re-try.
-                    Thread.Sleep(this.millisecondTimeout);
+                    Thread.Sleep(this.timeOut);
 
                     this.Result();
                 }
