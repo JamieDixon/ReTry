@@ -7,7 +7,7 @@ ReTry lets you decide how to handle specific exception types if the service fail
 Uses a fluent interface so you can do stuff like:
 
     // Make a service call and try 3 times if an exception is raised. After 3 attempts, return a redirect.
-	var result = serviceManager
+	var result = reTry
                     .ExecuteService<ServiceResult, RedirectResult>(() => someService.MakeHttpCall("Foo","Bar") , 3)
                     .IfServiceFailsThen<HttpFailedException>(() => RedirectSomewhereElse())
                     .Result();
