@@ -24,7 +24,7 @@ namespace ReTry.Service
         /// <param name="action">The action.</param>
         /// <param name="timeout">The timeout.</param>
         /// <param name="attempts">The attempts.</param>
-        /// <returns></returns>
+        /// <returns>New instance of IReTry</returns>
         IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, TimeSpan timeout, int attempts = 1);
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace ReTry.Service
         /// <typeparam name="TFailure">The type of the failure.</typeparam>
         /// <param name="action">The action.</param>
         /// <param name="attempts">The attempts.</param>
-        /// <returns></returns>
+        /// <returns>New instance of IReTry</returns>
         IReTry<TSuccess, TFailure> ExecuteService<TSuccess, TFailure>(Func<TSuccess> action, int attempts = 1);
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace ReTry.Service
         /// <param name="action">The action.</param>
         /// <param name="timeout">The timeout.</param>
         /// <param name="attempts">The attempts.</param>
-        /// <returns></returns>
+        /// <returns>New instance of IReTry</returns>
         IReTry<TResult, TResult> ExecuteService<TResult>(Func<TResult> action, TimeSpan timeout, int attempts = 1);
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace ReTry.Service
         /// <typeparam name="TResult">The type of the result.</typeparam>
         /// <param name="action">The action.</param>
         /// <param name="attempts">The attempts.</param>
-        /// <returns></returns>
+        /// <returns>New instance of IReTry</returns>
         IReTry<TResult, TResult> ExecuteService<TResult>(Func<TResult> action, int attempts = 1);
     }
 
@@ -76,7 +76,7 @@ namespace ReTry.Service
         /// <returns>
         /// The ReTry.Service.IReTry`2[TSuccess -&gt; TSuccess, TFailure -&gt; TFailure].
         /// </returns>
-        IReTry<TSuccess, TFailure> IfServiceFailsThen<TExceptionType>(Func<Exception, TFailure> action);
+        IReTry<TSuccess, TFailure> IfServiceFailsThen<TExceptionType>(Func<TExceptionType, TFailure> action) where TExceptionType : Exception;
 
         /// <summary>
         /// The result.
