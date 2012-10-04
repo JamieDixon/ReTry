@@ -9,13 +9,13 @@ C:\Repositories\ServiceManager\src\ServiceManager\bin\Debug\Service Manager.dll
 C:\Repositories\ServiceManager\src\ServiceManager\bin\Debug\Service Manager.pdb
 C:\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Service Manager.dll
 C:\Repositories\ServiceManager\src\ServiceManager\obj\Debug\Service Manager.pdb
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Debug\ResolveAssemblyReference.cache
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\bin\Debug\ReTry.dll
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\bin\Debug\ReTry.pdb
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Debug\ReTry.dll
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Debug\ReTry.pdb
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\bin\Debug\ReTry.dll
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\bin\Debug\ReTry.pdb
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\obj\Debug\ReTry.dll
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager\obj\Debug\ReTry.pdb
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\bin\Debug\ReTry.dll
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\bin\Debug\ReTry.pdb
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Debug\ReTry.dll
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager\obj\Debug\ReTry.pdb

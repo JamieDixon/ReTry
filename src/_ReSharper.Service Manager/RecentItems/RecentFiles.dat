@@ -1,30 +1,29 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IServiceManager.cs" caret="693" fromTop="14" />
-    <File id="122ED651-D2AC-4D64-B35E-765F37952917/f:ServiceManager.Tests.cs" caret="893" fromTop="8" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="3899" fromTop="43" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IReTry.cs" caret="3611" fromTop="45" />
+    <File id="122ED651-D2AC-4D64-B35E-765F37952917/f:ServiceManager.Tests.cs" caret="2337" fromTop="10" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="3858" fromTop="0" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTryResult.cs" caret="1972" fromTop="29" />
   </RecentFiles>
   <RecentEdits>
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="1004" fromTop="21" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="5186" fromTop="33" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="3645" fromTop="34" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IServiceManager.cs" caret="2221" fromTop="37" />
-    <File id="122ED651-D2AC-4D64-B35E-765F37952917/f:ServiceManager.Tests.cs" caret="2094" fromTop="45" />
     <File id="122ED651-D2AC-4D64-B35E-765F37952917/f:ServiceManager.Tests.cs" caret="2897" fromTop="52" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="5940" fromTop="33" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="6313" fromTop="44" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="2115" fromTop="38" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="1639" fromTop="26" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="3423" fromTop="43" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="3081" fromTop="41" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="6134" fromTop="40" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IServiceManager.cs" caret="1758" fromTop="44" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IServiceManager.cs" caret="1536" fromTop="30" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="3952" fromTop="15" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="377" fromTop="5" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="763" fromTop="17" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ServiceManager.cs" caret="662" fromTop="16" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IServiceManager.cs" caret="374" fromTop="5" />
-    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IServiceManager.cs" caret="590" fromTop="14" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="2108" fromTop="26" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="2733" fromTop="39" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="3298" fromTop="42" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="3545" fromTop="32" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IReTry.cs" caret="2674" fromTop="28" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IReTry.cs" caret="2231" fromTop="19" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IReTry.cs" caret="1736" fromTop="9" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IReTry.cs" caret="1200" fromTop="14" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="1536" fromTop="33" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="7693" fromTop="43" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="7518" fromTop="39" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="6935" fromTop="29" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:IReTry.cs" caret="3610" fromTop="45" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="6882" fromTop="43" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="6724" fromTop="41" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="6542" fromTop="28" />
+    <File id="92882886-D064-4101-8AC8-C2808F723953/f:ReTry.cs" caret="8153" fromTop="50" />
+    <File id="122ED651-D2AC-4D64-B35E-765F37952917/f:ServiceManager.Tests.cs" caret="2263" fromTop="31" />
   </RecentEdits>
 </RecentFiles>

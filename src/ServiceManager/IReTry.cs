@@ -69,6 +69,11 @@ namespace ReTry.Service
     public interface IReTry<TSuccess, TFailure> : IReTry
     {
         /// <summary>
+        /// Gets the result.
+        /// </summary>
+        ReTryResult<TSuccess, TFailure> Result { get; }
+
+        /// <summary>
         /// The if service fails then.
         /// </summary>
         /// <typeparam name="TExceptionType">Exception type to handle.</typeparam>
@@ -79,11 +84,15 @@ namespace ReTry.Service
         IReTry<TSuccess, TFailure> IfServiceFailsThen<TExceptionType>(Func<TExceptionType, TFailure> action) where TExceptionType : Exception;
 
         /// <summary>
-        /// The result.
+        /// The if service fails then.
         /// </summary>
+        /// <param name="action">
+        /// The action.
+        /// </param>
+        /// <typeparam name="TExceptionType">Exception type to handle.</typeparam>
         /// <returns>
-        /// The ReTry.Service.ReTryResult.
+        /// The ReTry.Service.IReTry`2[TSuccess -&gt; TSuccess, TFailure -&gt; TFailure].
         /// </returns>
-        ReTryResult<TSuccess, TFailure> Result();
+        IReTry<TSuccess, TFailure> IfServiceFailsThen<TExceptionType>(Action<TExceptionType> action) where TExceptionType : Exception;
     }
 }

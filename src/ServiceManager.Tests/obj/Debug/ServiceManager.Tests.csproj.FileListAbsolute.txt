@@ -14,13 +14,6 @@ C:\Repositories\ServiceManager\src\ServiceManager.Tests\bin\Debug\Service Manage
 C:\Repositories\ServiceManager\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.csprojResolveAssemblyReference.cache
 C:\Repositories\ServiceManager\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.dll
 C:\Repositories\ServiceManager\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.pdb
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\bin\Debug\ServiceManager.Tests.dll
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\bin\Debug\ServiceManager.Tests.pdb
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\obj\Debug\ResolveAssemblyReference.cache
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.dll
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.pdb
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\bin\Debug\ReTry.dll
-C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\bin\Debug\ReTry.pdb
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager.Tests\bin\Debug\ServiceManager.Tests.dll
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager.Tests\bin\Debug\ServiceManager.Tests.pdb
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager.Tests\bin\Debug\ReTry.dll
@@ -28,3 +21,10 @@ C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager.Tests\bin\Debug\ReTry.pdb
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.dll
 C:\Users\art\Documents\GitHub\ReTry\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.pdb
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\bin\Debug\ServiceManager.Tests.dll
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\bin\Debug\ServiceManager.Tests.pdb
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\bin\Debug\ReTry.dll
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\bin\Debug\ReTry.pdb
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.dll
+C:\dev\Repositories\ServiceManager\ServiceManager\src\ServiceManager.Tests\obj\Debug\ServiceManager.Tests.pdb

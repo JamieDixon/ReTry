@@ -31,7 +31,7 @@ namespace ServiceManager.Tests
                 // Act
                 var result = serviceManager
                     .ExecuteService<string, string>(() => "Hello World", 5)
-                    .Result();
+                    .Result;
 
                 // Assert
                 Assert.AreEqual("Hello World", result.Result);
@@ -46,6 +46,18 @@ namespace ServiceManager.Tests
                 var newServiceManager = serviceManager.ExecuteService<string, string>(() => "Hello World", 5);
 
                 Assert.AreNotEqual(serviceManager, newServiceManager);
+            }
+
+            [TestMethod]
+            public void Works_Correctly_With_Action_Type()
+            {
+                var retry = new ReTry();
+
+                var action = new Action(() => { throw new Exception("Some Exception"); });
+
+                var result = retry.ExecuteService(action).IfServiceFailsThen<Exception>(exception => { }).Result;
+
+                Assert.IsNotNull(result);
             }
         }
 
@@ -62,7 +74,7 @@ namespace ServiceManager.Tests
                 var result = serviceManager
                     .ExecuteService<string, string>(() => { throw new DirectoryNotFoundException("Boom"); })
                     .IfServiceFailsThen<DirectoryNotFoundException>(exception => "Hello World")
-                    .Result();
+                    .Result;
 
                 // Assert
                 Assert.AreEqual("Hello World", result.FailureResult);
@@ -78,7 +90,7 @@ namespace ServiceManager.Tests
                 var result = serviceManager
                     .ExecuteService<string, string>(() => { throw new DirectoryNotFoundException("Boom"); })
                     .IfServiceFailsThen<Exception>(exception => "Hello World")
-                    .Result();
+                    .Result;
 
                 // Assert
                 Assert.AreEqual("Hello World", result.FailureResult);
@@ -95,7 +107,7 @@ namespace ServiceManager.Tests
                 {
                     var result = serviceManager
                     .ExecuteService<string, string>(() => { throw new Exception("Boom"); })
-                    .Result();
+                    .Result;
                     Assert.Fail("We should not get here");
                 }
                 catch (Exception ex)

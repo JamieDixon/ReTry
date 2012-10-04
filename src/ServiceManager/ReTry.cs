@@ -79,6 +79,26 @@ namespace ReTry.Service
         }
 
         /// <summary>
+        /// The execute service.
+        /// </summary>
+        /// <param name="action">
+        /// The action.
+        /// </param>
+        /// <returns>
+        /// The ReTry.Service.IReTry.
+        /// </returns>
+        public IReTry<bool, bool> ExecuteService(Action action)
+        {
+            Func<bool> f = () =>
+                {
+                    action();
+                    return true;
+                };
+
+            return this.ExecuteService(f, TimeSpan.Zero);
+        }
+
+        /// <summary>
         /// Clones the current instance of ReTry.
         /// </summary>
         /// <returns>
@@ -140,6 +160,64 @@ namespace ReTry.Service
         }
 
         /// <summary>
+        /// Gets the results.
+        /// </summary>
+        /// <returns>
+        /// The TResult.
+        /// </returns>
+        public ReTryResult<TSuccess, TFailure> Result
+        {
+            get
+            {
+                this.count++;
+
+                TFailure failureResult = default(TFailure);
+
+                try
+                {
+                    this.ResultImplimentation = this.ServiceFunc();
+                }
+                catch (Exception ex)
+                {
+                    if (this.count < this.attemptsAllowed)
+                    {
+                        if (this.timeOut != TimeSpan.Zero)
+                        {
+                            // Wait half a second then re-try.
+                            Thread.Sleep(this.timeOut);
+                        }
+
+                        return this.Result;
+                    }
+
+                    this.exception = ex;
+
+                    foreach (var possibleMethod in this.failedFuncs)
+                    {
+                        if (possibleMethod.Key.IsInstanceOfType(this.exception))
+                        {
+                            this.Failed = true;
+                            failureResult = possibleMethod.Value(this.exception);
+                            break;
+                        }
+                    }
+
+                    if (!this.Failed)
+                    {
+                        throw new UnspecifiedExceptionHandler(this.exception);
+                    }
+                }
+
+                if (this.ResultImplimentation == null)
+                {
+                    this.ResultImplimentation = default(TSuccess);
+                }
+
+                return new ReTryResult<TSuccess, TFailure>(this.ResultImplimentation, failureResult, this.exception);
+            }
+        }
+
+        /// <summary>
         /// Gets or sets a value indicating whether failed.
         /// </summary>
         public bool Failed { get; set; }
@@ -179,55 +257,31 @@ namespace ReTry.Service
         }
 
         /// <summary>
-        /// Gets the results.
+        /// The if service fails then.
         /// </summary>
+        /// <param name="action">
+        /// The action.
+        /// </param>
+        /// <typeparam name="TExceptionType">
+        /// The exception tpye to be handled.
+        /// </typeparam>
         /// <returns>
-        /// The TResult.
+        /// The ReTry.Service.IReTry`2[TSuccess -&gt; TSuccess, TFailure -&gt; TFailure].
         /// </returns>
-        public ReTryResult<TSuccess, TFailure> Result()
+        public IReTry<TSuccess, TFailure> IfServiceFailsThen<TExceptionType>(Action<TExceptionType> action) where TExceptionType : Exception
         {
-            this.count++;
+            var serviceManager = (ReTry<TSuccess, TFailure>)this.Clone();
 
-            TFailure failureResult = default(TFailure);
-
-            try
+            // Convert the func to a func type we can store.
+            var f = new Func<Exception, TFailure>(x =>
             {
-                this.ResultImplimentation = this.ServiceFunc();
-            }
-            catch (Exception ex)
-            {
-                if (this.count < this.attemptsAllowed)
-                {
-                    if (this.timeOut != TimeSpan.Zero)
-                    {
-                        // Wait half a second then re-try.
-                        Thread.Sleep(this.timeOut);
-                    }
+                action(x as TExceptionType);
+                return default(TFailure);
+            });
 
-                    this.Result();
-                }
-                else
-                {
-                    this.exception = ex;
+            serviceManager.failedFuncs.Add(typeof(TExceptionType), f);
 
-                    foreach (var possibleMethod in this.failedFuncs)
-                    {
-                        if (possibleMethod.Key.IsInstanceOfType(this.exception))
-                        {
-                            this.Failed = true;
-                            failureResult = possibleMethod.Value(this.exception);
-                            break;
-                        }
-                    }
-
-                    if (!this.Failed)
-                    {
-                        throw new UnspecifiedExceptionHandler(this.exception);
-                    }
-                }
-            }
-
-            return new ReTryResult<TSuccess, TFailure>(this.ResultImplimentation, failureResult, this.exception);
+            return serviceManager;
         }
-    }   
+    }
 }
